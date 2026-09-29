@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: market-app
+  datasource:
+    url: jdbc:postgresql://localhost:5679/postgres
+    username: postgres
+    password:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+    enabled: true
+
+server:
+  port: 8080
